@@ -25,12 +25,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $mail->isSMTP();
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'reissathena64@gmail.com';
-            $mail->Password   = 'jjvqrhyxbqefixoy'; // Replace with your email password
+            $mail->Username   = 'emailmo@gmail.com';
+            $mail->Password   = 'passwordmo'; // Replace with your email password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port       = 465;
 
-            $mail->setFrom('reissathena64@gmail.com', 'Aki Reiss');
+            $mail->setFrom('emailmo@gmail.com', 'Aki Reiss');
             $mail->addAddress($userEmail);
 
             $resetLink = 'https://yourwebsite.com/reset-password.php?token=' . $resetToken;
